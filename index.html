@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="모바일 개발자 박채성 포트폴리오">
+    <title>박채성 | Mobile Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="홈으로 이동">PCS</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#work">실무 프로젝트</a>
+        <a href="#projects">사이드 프로젝트</a>
+        <a href="#profile">프로필</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <img class="hero__profile" src="asset/profile.jpg" alt="박채성 프로필 사진">
+          <h2 id="hero-title">박채성</h2>
+          <p class="hero__lead">
+            기능 구현을 넘어 운영 효율과 지속 가능한 확장성을 고민하는 플러터 개발자입니다.
+            유지보수와 확장성을 먼저 바라보며 안정적인 서비스를 만들어 갑니다.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#work">프로젝트 보기</a>
+            <a class="button button--ghost" href="mailto:97psh@naver.com">97psh@naver.com</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section section--surface" aria-labelledby="work-title">
+        <div class="section__heading">
+          <p class="eyebrow">Work</p>
+          <h2 id="work-title">실무 프로젝트</h2>
+        </div>
+        <div class="project-grid project-grid--work" id="work-grid"></div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="section__heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">사이드 프로젝트</h2>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section id="profile" class="section section--surface profile" aria-labelledby="profile-title">
+        <div>
+          <p class="eyebrow">Profile</p>
+          <h2 id="profile-title">기술과 성장</h2>
+          <p id="profile-desc">
+            Flutter 실무 개발과 Android 프로젝트 경험을 바탕으로 모바일 앱의 기능 개발, 성능 개선, 배포, 유지보수를 수행해 왔습니다.
+            SSAFY 모바일 과정과 컴퓨터공학 전공을 통해 FE/BE 기초와 협업 프로젝트 경험을 쌓았습니다.
+          </p>
+        </div>
+        <dl class="skill-list">
+          <div>
+            <dt>Flutter</dt>
+            <dd>실무</dd>
+          </div>
+          <div>
+            <dt>Dart</dt>
+            <dd>실무</dd>
+          </div>
+          <div>
+            <dt>Android / Kotlin</dt>
+            <dd>프로젝트</dd>
+          </div>
+          <div>
+            <dt>Git / Firebase</dt>
+            <dd>프로젝트</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>SSAFY 모바일 과정</dd>
+          </div>
+          <div>
+            <dt>License</dt>
+            <dd>정보처리기사</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>작은 변화로 사용자 경험을 향상시키는 개발자로 성장하겠습니다.</p>
+      <a href="mailto:97psh@naver.com">97psh@naver.com</a>
+    </footer>
+
+    <div class="modal" id="project-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" aria-label="상세 화면 닫기" data-close-modal>X</button>
+        <div class="modal__media" id="modal-media"></div>
+        <div class="modal__content">
+          <p class="eyebrow" id="modal-category"></p>
+          <h2 id="modal-title"></h2>
+          <p id="modal-summary"></p>
+          <dl class="modal__meta" id="modal-meta"></dl>
+          <div class="modal__detail">
+            <h3>주요 내용</h3>
+            <ul id="modal-details"></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
