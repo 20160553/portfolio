@@ -211,7 +211,7 @@ h3 {
 .profile p,
 .project-card p,
 .modal__content p,
-.modal__detail li {
+.achievement-card dd {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -468,14 +468,46 @@ h3 {
 }
 
 .modal__detail h3 {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.modal__detail ul {
+.achievement-list {
   display: grid;
-  gap: 10px;
+  gap: 14px;
   margin: 0;
-  padding-left: 20px;
+}
+
+.achievement-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.achievement-card h4 {
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+
+.achievement-card dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.achievement-card div {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.achievement-card dt {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.achievement-card dd {
+  margin: 0;
 }
 
 body.modal-open {
